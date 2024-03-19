@@ -3,9 +3,7 @@ import useGenres from "../hooks/useGenres";
 import getCroppedImageUrl from "../Services/image-url";
 
 const GenreList = () => {
-  const { data, isLoading, error } = useGenres();
-
-  if (error) return null;
+  const { data, isLoading } = useGenres();
 
   if (isLoading) return <Spinner />;
   return (
